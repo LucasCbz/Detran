@@ -1,10 +1,10 @@
 
 <html>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">z
 <body>
 
     <div class="container">
-        <form action="validacao.php" method="POST">
+        <form  class="container" action="validacao.php" method="POST">
             <div class="login">
                 <h1 class="">Sistema Administrativo Escolar</h1>
 

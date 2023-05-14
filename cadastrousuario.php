@@ -47,6 +47,7 @@ if (isset($_GET['acao'])) {
                 <div>
                     <label for="cpf">CPF:</label>
                     <input type="text" name="cpf" placeholder="Seu CPF" oninput="validarCPF(this)" value="<?=$cpf?>">
+            <span id="cpf-erro"></span>
                 </div>
                 <div>
                     <label for="telefone">Telefone:</label>

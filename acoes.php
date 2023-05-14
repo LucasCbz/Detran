@@ -52,7 +52,7 @@ elseif($acao == 2) {
         $conexao->executar($sql);
         header("location: listarUsuario.php?acao=1");
     } else {
-        echo "CPF inválido!";
+        header("location: cadastro.php?acao=1");
     }
 }elseif($acao==3){
     $idInfracao = $_POST['infracao'];

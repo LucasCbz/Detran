@@ -70,12 +70,12 @@ if (isset($_GET['infracao'])) {
                 <label for="custo">Custo:</label>
                 <input type="number" name="custo" value="<?= $custo ?>">
             </div>
-
+<br>
             <div>
                 <label for="data">Data:</label>
                 <input type="date" name="data" value="<?= $data ?>">
             </div>
-
+             <br>
             <div>
                 <label for="placa">Placa:</label>
                 <input type="text" name="placa" value="<?= $placa ?>">
@@ -124,7 +124,16 @@ if (isset($_GET['infracao'])) {
             <div>
                 <label for="cpfinf">CPF do infrator:</label>
                 <input type="text" id="cpfinf" name="cpfinf" oninput="validarCPF(this)" value="<?= $cpfinf ?>">
+
             </div>
+            <?php 
+            if(isset($_GET['acao']) ){
+                if($_GET['acao']==1)
+                {
+    echo "CPF não existe no banco de dados";
+                }
+            }
+                ?> 
         </div>
 
         <input class="sub" type="submit" value="Enviar">

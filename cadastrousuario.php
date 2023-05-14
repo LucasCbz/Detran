@@ -27,48 +27,50 @@ if (isset($_GET['acao'])) {
   <title>Document</title>
 </head>
 
-<body>
-  <header class="header1">
+<body >
+    <div class="container">
     <form class="container" action="acoes.php?acao=<?=$acao?>" method="post">
-      <div class="cadastro1">
-        <h1>Usuário</h1>
+            <div class="cadastro">
+                <h2>Cadastro</h2>
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" placeholder="Nome do usuário" value="<?=$nome?>">
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="text" name="email" placeholder="Seu email" value="<?=$email?>">
+                </div>
+                <div>
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="senha" placeholder="Crie uma senha" value="<?=$senha?>">
+                </div>
+                <div>
+                    <label for="cpf">CPF:</label>
+                    <input type="text" name="cpf" placeholder="Seu CPF" oninput="validarCPF(this)" value="<?=$cpf?>">
+                </div>
+                <div>
+                    <label for="telefone">Telefone:</label>
+                    <input type="number" name="telefone" placeholder="Seu Telefone" value="<?=$tel?>">
+                </div>
+                <div>
+                    <label for="Categoria">Categoria:</label>
+                    <input type="text" name="cargo" placeholder="Sua categoria" value="<?=$cargo?>">
+                </div>
+                    <div class="button-cadastro">
+                    <button type="submit">Cadastrar</button>
+                </div><!--button-cadastro-->
+                
 
-        <div class="formg">
-          <div>
-            <label for="nome">Nome:</label>
-            <input type="text" name="Nome" value="<?=$nome?>">
-          </div>
+            </div>
+                
 
-          <div>
-            <label for="email">E-mail:</label>
-            <input type="email" name="email" value="<?=$email?>">
-          </div>
+           
+            
 
-          <div>
-            <label for="senha">Senha:</label>
-            <input type="password" name="senha" value="<?=$senha?>">
-          </div>
-
-          <div>
-            <label for="cpf">CPF:</label>
-            <input type="text" id="cpf" name="cpf" oninput="validarCPF(this)" value="<?=$cpf?>">
-            <span id="cpf-erro"></span>
-          </div>
-
-          <div>
-            <label for="telefone">Telefone:</label>
-            <input type="number" name="telefone" value="<?=$tel?>">
-          </div>
-
-          <div>
-            <label for="Categoria">Categoria:</label>
-            <input type="text" name="cargo" value="<?=$cargo?>">
-          </div>
-        </div><!--formg-->
-        <input class="sub" type="submit" value="Enviar">
-      </div><!--cadastro1-->
-    </form>
-  </header>
+        </form>
 </body>
 
 </html>
+
+
+

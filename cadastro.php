@@ -53,7 +53,7 @@ if (isset($_GET['infracao'])) {
   <title>Document</title>
 </head>
 
-<body>
+<body style=" background-image: url(Imagens/estrada.jpg);">
   <header class="header1">
     <form class="container" action="acoes.php?acao=<?=$acao?>" method="post">
     <input type="hidden" name="infracao" value="<?= $id ?>">

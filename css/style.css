@@ -1,104 +1,156 @@
-body {
+*{
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  padding:0;
+  box-sizing: border-box;
 }
-header {
+
+body{
+  background-image: url(../imagens/estrada.jpg);
+  
+  background-position: center;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+}   
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Define a cor de fundo semi-transparente */
+}
+
+.container{
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.inicio {
-  border: 1px solid black;
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
-  border-radius: 10px;
-  text-align: center;
-  padding: 20px;
-}
-img {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.but1 {
-  border: 1px solid black;
-  display: inline-block;
-  font-size: 25px;
-  margin-top: 40px;
-  padding: 10px;
-  color: black;
-  background-color: #bdbfbe;
-  margin: 9px;
-  margin-top: 20px;
-  border-radius: 8px;
-  text-decoration: none;
-}
-h1 {
-  font-size: 40px;
-  color: black;
-}
-.inicio p {
-  color: black;
-  font-size: 20px;
-  margin-top: 40px;
-}
-.cadastro1 {
-  display: block;
-  margin-left: 30px;
-  margin-right: 30px;
-  margin-top: 20px;
-  height: 500px;
-  width: 300px;
-  flex-basis: calc(20% - 20px);
-}
-.cadastro1 h1 {
-  margin: 0;
-  margin-bottom: 10px;
-  text-align: center;
-}
-form label {
-  display: block;
-  margin: 10px;
-  margin-left: 15px;
+  height: 100vh;
 }
 
-form input {
-  margin: 10px;
-  margin-left: 15px;
-  display: block;
-  width: 80%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+.login, .cadastro, .cadastro1{
+  background-color: #ffffff;
+  backdrop-filter: blur(5px);
+  border-radius: 30px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  padding: 40px;
+  width: 400px;
 }
-.sub {
-  align-self: center;
-  display: block;
-  width: 200px;
-  height: 70px;
-  padding: 15px;
-  margin-top: 5%;
-  margin-left: 50%;
-  transform: translate(-50%);
-  border: 1px solid black;
-}
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 0 auto;
-}
-.formg {
+
+
+h1,h2{
+  color: #000000;
+  font-size: 36px;
+  font-weight: 700;
   margin-bottom: 20px;
-  padding: 20px;
-  background-color: #f5f5f5;
-  border-radius: 10px;
-  border: 1px solid black;
+  text-align: center;
 }
+
+p{
+  margin-top: 20px;
+  color: #353333;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"]{
+  background-color: #f8f8f8;
+  border: none;
+  border-radius: 4px;
+  color: #353333;
+  font-size:16px;
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+}
+.entrada-email, .entrada-senha{
+  display: flex;
+  align-items: center;
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder,
+input[type="password"]::placeholder{
+  color:#999;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus{
+  outline:none;
+}
+
+hr{
+  background-color: #ddd;
+  border: none;
+  height: 1px;
+  margin: 15px 0;
+}
+
+button{
+  background: #017201;
+  border: none;
+  border-radius: 10px;
+  color:#fff;
+  cursor:pointer;
+  font-size: 15px;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  
+}
+.button-login, .button-cadastro{
+  padding-top: 23px;  
+}
+
+button:hover{
+  background-color: #00c500;
+}
+
+
+
+
+.registrar{
+  margin-top: 30px;
+}
+
+.imagen{
+  position: absolute;
+  display: table;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;  
+}
+.menu-img{
+  display: flex;
+}
+.menu{
+  position: relative;
+  width: 40%;
+  height: 100vh;
+  margin-bottom: 0px;
+}
+
+.menu2{
+  margin: 0 auto;
+  margin-top: 6%;
+  position: relative;
+  width: 30%;
+  height: 70vh;
+}
+.arrumar{
+  width: 40%;
+  height: 50vh;
+  margin-left: 50px;
+  margin-top: 20px;
+  position: absolute;
+}
+
+
+
+
+
+

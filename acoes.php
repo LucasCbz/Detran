@@ -2,6 +2,47 @@
 include_once "conexao.php";
 $acao = $_GET["acao"];
 
+
+
+function validarCPF($cpf) {
+    // Remove caracteres que não sejam números
+    $cpf = preg_replace('/[^0-9]/is', '', $cpf);
+  
+    // Verifica se o número de dígitos está correto
+    if (strlen($cpf) != 11) {
+      return false;
+    }
+  
+    // Verifica se o CPF é um número com todos os dígitos iguais
+    if (preg_match('/(\d)\1{10}/', $cpf)) {
+      return false;
+    }
+  
+    // Calcula o primeiro dígito verificador
+    $soma = 0;
+    for ($i = 0; $i < 9; $i++) {
+      $soma += (($i+1) * intval(substr($cpf, $i, 1)));
+    }
+    $digito1 = (($soma % 11) < 2) ? 0 : (11 - ($soma % 11));
+  
+    // Calcula o segundo dígito verificador
+    $soma = 0;
+    for ($i = 0; $i < 9; $i++) {
+      $soma += (10-$i) * intval(substr($cpf, $i, 1));
+    }
+    $soma += $digito1 * 2;
+    $digito2 = (($soma % 11) < 2) ? 0 : (11 - ($soma % 11));
+  
+    // Verifica se os dígitos verificadores estão corretos
+    if (($digito1 != intval(substr($cpf, 9, 1))) || ($digito2 != intval(substr($cpf, 10, 1)))) {
+      return true;
+    }
+  
+    return false;
+  }
+  
+
+
 // Inserir dados
 if($acao == 5) {
     $nome=$_POST['Nome'];
@@ -18,12 +59,16 @@ if($acao == 5) {
     
 }
 elseif($acao == 2) {
-    $nome=$_POST['Nome'];
+    $nome=$_POST['nome'];
     $email= $_POST['email'];
     $telefone=$_POST['telefone'];
     $senha=$_POST['senha'];
     $cpf=$_POST['cpf'];
     $cargo=$_POST['cargo'];
+    if (!validarCPF($cpf)) {
+        header("Location: cadastrousuario.php?acao=2&error=cpf_invalido");
+        exit();
+    }
     $sql="insert into usuario (Nome,email,senha,cpf,telefone,cargo) values ('$nome','$email','$senha','$cpf','$telefone','$cargo')";
     $conexao= new conexao();
     $conexao->executar($sql);

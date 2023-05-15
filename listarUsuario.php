@@ -24,24 +24,33 @@ function buscarmodeloinfrator($idmarca)
 <h2>Lista de infração</h2>
 </div>
 <div class="container">
-    <a href="cadastro.php">Criar Infração</a>
+    <a href="cadastro.php"><button class="bnt"> Criar Infração</button></a>
 </div>
 <hr/>
 <style>
-    body{background-color: #fffbd9;
+    body{background-color: #e0f5f6;
     }
-    .container { text-align: center; }
+    .container { text-align: center;}
+    .bnt{
+        border-radius: 5px;
+        color: #1a60ab;
+        cursor: pointer;
+    }
+    .tab{
+        width: 95%;
+        left: 40px;
+        position: relative;
+    }
     table th,td {
         border: 1px solid black;
-        position: relative;
-        display: block;
+        width: 5%;
 
     }
     th,td {
         padding:3px 8px;
     }
     th{
-        background-color: #0e6028;
+        background-color: #1a60ab;
         color: white;
     }
     
@@ -54,7 +63,7 @@ function buscarmodeloinfrator($idmarca)
    } 
     
 </style>
-<div></div>
+<div class="tab">
 <table>
     <tr>
         <th>ID da infracao</th>
@@ -68,6 +77,7 @@ function buscarmodeloinfrator($idmarca)
         <th>ALTERAR</th>
         <th>EXCLUIR</th>
     </tr>
+</div>
   <?php
    $arrinfracao= $conexao->executar("select * from infracao");
    

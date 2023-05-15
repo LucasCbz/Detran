@@ -151,7 +151,41 @@ button:hover{
 table{
   border: 1px solid black;
 }
+.list{background-color: #e0f5f6;}
+.containers{ text-align: center;}
+.bnt{
+    border-radius: 5px;
+    color: #1a60ab;
+    cursor: pointer;
+    background: #a7c9d7;
+    padding: 5px;
+    font-size: 15px;
+}
+.tab{
+    width: 95%;
+    left: 40px;
+    position: relative;
+}
+table th,td {
+    border: 1px solid black;
+    width: 5%;
 
+}
+th,td {
+    padding:3px 8px;
+}
+th{
+    background-color: #1a60ab;
+    color: white;
+}
+
+    table tr:nth-child(odd){
+        background-color: #ddd;
+}
+   table tr:nth-child(even){
+    background-color: white;
+
+} 
 
 
 

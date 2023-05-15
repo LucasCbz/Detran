@@ -18,51 +18,17 @@ function buscarmodeloinfrator($idmarca)
     return $marca['NomeMarca'];
 }
 ?>
+<div class="list">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/style.css">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-<div class="container">
+<div class="containers">
 <h2>Lista de infração</h2>
 </div>
-<div class="container">
-    <a href="cadastro.php"><button class="bnt"> Criar Infração</button></a>
+<div class="containers">
+    <a href="cadastro.php"><button class="bnt"> Criar Infração </button></a>
 </div>
-<hr/>
-<style>
-    body{background-color: #e0f5f6;
-    }
-    .container { text-align: center;}
-    .bnt{
-        border-radius: 5px;
-        color: #1a60ab;
-        cursor: pointer;
-    }
-    .tab{
-        width: 95%;
-        left: 40px;
-        position: relative;
-    }
-    table th,td {
-        border: 1px solid black;
-        width: 5%;
-
-    }
-    th,td {
-        padding:3px 8px;
-    }
-    th{
-        background-color: #1a60ab;
-        color: white;
-    }
-    
-        table tr:nth-child(odd){
-            background-color: #ddd;
-    }
-       table tr:nth-child(even){
-        background-color: white;
-
-   } 
-    
-</style>
+</br>
 <div class="tab">
 <table>
     <tr>

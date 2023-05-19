@@ -6,7 +6,7 @@
     <div class="container">
         <form  class="container" action="validacao.php" method="POST">
             <div class="login">
-                <h1 class="">Sistema Administrativo Escolar</h1>
+                <h1 class="">DENATRAN</h1>
 
                 <div class="email">
                     <p>Email</p>

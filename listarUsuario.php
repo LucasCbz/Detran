@@ -23,10 +23,11 @@ function buscarmodeloinfrator($idmarca)
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 <div class="containers">
+<body>
 <h2>Lista de infração</h2>
 </div>
 <div class="containers">
-    <a href="cadastro.php"><button class="bnt"> Criar Infração </button></a>
+    <a href="cadastro.php"> Criar Infração </a>
 </div>
 </br>
 <div class="tab">
@@ -72,6 +73,7 @@ function buscarmodeloinfrator($idmarca)
   ?>
 </table>
 </div>
+</body>
 <?php
 if(isset($_GET['acao']) ){
 ?>

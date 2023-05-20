@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 11-Maio-2023 às 20:09
+-- Tempo de geração: 20-Maio-2023 às 07:21
 -- Versão do servidor: 10.4.28-MariaDB
 -- versão do PHP: 8.2.4
 
@@ -42,6 +42,9 @@ CREATE TABLE `infracao` (
 -- Extraindo dados da tabela `infracao`
 --
 
+INSERT INTO `infracao` (`idinfracao`, `nomeinfr`, `custo`, `data`, `placa`, `AnoCar`, `Usuario_idUsuario`, `Marca_idMarca`) VALUES
+(1, 'batida', 200, '2023-05-07', 'dqeq', 2001, 9, 1),
+(2, 'eduardo', 2231, '2023-05-16', '3123', 132213, 9, 1);
 
 -- --------------------------------------------------------
 
@@ -100,6 +103,9 @@ CREATE TABLE `usuario` (
 -- Extraindo dados da tabela `usuario`
 --
 
+INSERT INTO `usuario` (`idUsuario`, `Nome`, `Email`, `Senha`, `Cpf`, `telefone`, `cargo`) VALUES
+(9, '', 'eduardoferrari1001@gmail.com', '123', '123', '123', 0);
+
 --
 -- Índices para tabelas despejadas
 --
@@ -136,10 +142,16 @@ ALTER TABLE `usuario`
 --
 
 --
+-- AUTO_INCREMENT de tabela `infracao`
+--
+ALTER TABLE `infracao`
+  MODIFY `idinfracao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Restrições para despejos de tabelas
